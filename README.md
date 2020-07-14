@@ -1,1 +1,1 @@
-# endpass-android-sdk-bundle
+# endpass-android-sdk-public
