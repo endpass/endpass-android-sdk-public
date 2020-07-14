@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CoordinateView">
+        <attr name="stepX" format="enum">
+            <enum name="zoom_10" value="0"/>
+            <enum name="zoom_20" value="1"/>
+            <enum name="zoom_40" value="2"/>
+            <enum name="zoom_70" value="3"/>
+            <enum name="zoom_100" value="4"/>
+        </attr>
+    </declare-styleable>
+
+</resources>

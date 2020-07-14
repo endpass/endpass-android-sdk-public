@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <endpass.android.endpass_sdk.presentation.custom.CenteredTitleToolbar
+        android:id="@+id/mToolBar"
+        style="@style/ToolbarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </endpass.android.endpass_sdk.presentation.custom.CenteredTitleToolbar>
+
+
+    <endpass.android.endpass_sdk.presentation.custom.CurrencyView
+        android:id="@+id/currencyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

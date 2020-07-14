@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestActivity">
+
+
+    <ImageView
+        android:id="@+id/documentIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="52dp"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_endpass" />
+
+
+    <TextView
+        android:id="@+id/descTv"
+        style="@style/LightTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="@dimen/default_android_margin"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="6sp"
+        android:text="Tired of re-uploading documents\nto verify your identity?"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/documentIv"
+
+        />
+
+
+    <TextView
+        android:id="@+id/descTv2"
+        style="@style/LightTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/default_android_margin"
+        android:layout_marginEnd="@dimen/default_android_margin"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="6sp"
+        android:text="Upload your documents for verification\nONCE, and we'll securely store them, so\nyou can re-use them as you please. "
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descTv"
+
+        />
+
+
+    <endpass.android.endpass_sdk.presentation.custom.ValutButton
+        android:id="@+id/connectBtn"
+        style="@style/BtnPrimary"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/default_android_margin"
+        android:text="OAUTH CONNECT"
+        app:isActive="true"
+        app:layout_constraintBottom_toTopOf="@+id/requestBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <endpass.android.endpass_sdk.presentation.custom.ValutButton
+        android:id="@+id/requestBtn"
+        style="@style/BtnPrimary"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/default_android_margin"
+        android:text="OAUTH REQUEST"
+        app:isActive="false"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ProgressBar
+        android:id="@+id/mProgressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:indeterminate="true"
+        android:theme="@style/AppTheme.WhiteAccent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/loginBtn"
+        app:layout_constraintEnd_toEndOf="@+id/loginBtn"
+        app:layout_constraintStart_toStartOf="@+id/loginBtn"
+        app:layout_constraintTop_toTopOf="@+id/loginBtn"
+        tools:visibility="visible" />
+
+
+    <endpass.android.endpass_sdk.presentation.custom.ValutButton
+        android:id="@+id/button"
+        android:visibility="gone"
+        style="@style/BtnPrimary"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/default_android_margin"
+        android:text="Authorize with Endpass"
+        app:isActive="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/descTv3"
+        style="@style/LightTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="@dimen/default_android_margin"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="6sp"
+        android:text="Thanks for helping us fight global\ncybercrime and fraud!"
+        android:textColor="#3700B3"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descTv2"
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/responseTv"
+        style="@style/LightTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="@dimen/default_android_margin"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="6sp"
+        android:textColor="#3700B3"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descTv3"
+
+        />
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

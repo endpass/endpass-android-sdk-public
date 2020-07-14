@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="70dp"
+    android:paddingEnd="@dimen/default_android_margin"
+    >
+
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tokenTitleTv"
+        style="@style/MediumTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_android_margin"
+        android:layout_marginTop="8dp"
+        android:background="@color/black"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="6sp"
+        android:padding="@dimen/default_android_margin"
+        android:text="https://api-dev.endpass.com/v1/documents"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tokenTvTitle"
+        android:alpha="0"
+        style="@style/LightTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_android_margin"
+        android:layout_marginTop="8dp"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="6sp"
+        android:text="Token"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tokenTitleTv" />
+
+    <TextView
+        android:id="@+id/tokenTv"
+        style="@style/LightTextView"
+        android:alpha="0"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_android_margin"
+        android:layout_marginTop="8dp"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="6sp"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tokenTvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tokenTitleTv"
+        tools:text="Some Token" />
+
+
+    <TextView
+        android:id="@+id/resultTv"
+        style="@style/LightTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_android_margin"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="@dimen/default_android_margin"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="6sp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tokenTv"
+        tools:text="Some Token" />
+
+
+    <endpass.android.endpass_sdk.presentation.custom.ValutButton
+        android:id="@+id/button"
+        style="@style/BtnPrimary"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/default_android_margin"
+        android:text="GET DOCUMENTS"
+        app:isActive="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

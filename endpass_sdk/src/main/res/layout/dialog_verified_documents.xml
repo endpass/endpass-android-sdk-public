@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/titleTv"
+        style="@style/MediumTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="28dp"
+        android:letterSpacing="0.09"
+        android:text="@string/select_document"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="17sp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.53dp"
+        android:layout_marginEnd="@dimen/default_android_margin"
+        android:background="#D5D9E0" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_android_margin"
+        android:layout_marginEnd="@dimen/default_android_margin"
+        android:background="@drawable/bg_doc_list"
+        android:padding="2dp" />
+
+    <endpass.android.endpass_sdk.presentation.custom.ValutButton
+        android:id="@+id/uploadNewDocument"
+        style="@style/BtnPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/default_android_margin"
+        android:text="@string/upload_new_document"
+        app:isActive="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</LinearLayout>
